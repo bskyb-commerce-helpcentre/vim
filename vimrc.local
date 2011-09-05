@@ -1,10 +1,9 @@
-syntax enable
-colorscheme solarized
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
+"colorscheme solarized
+"if has('gui_running')
+    "set background=light
+"else
+    "set background=dark
+"endif
 
 " Set control and e expand zencoding
 let g:user_zen_expandabbr_key = '<c-e>'
@@ -35,13 +34,9 @@ set nofoldenable
 "Shortcut to fold tags with leader (usually \) + ft
 nnoremap <leader>ft Vatzf
 
-
 set number      "add line numbers
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
-
-"map to CommandT TextMate style finder
-nnoremap <leader>t :CommandT<CR>
 
 "Enabling Zencoding
 let g:user_zen_settings = {
@@ -59,3 +54,6 @@ let g:user_zen_settings = {
   \    'extends' : 'html',
   \  },
  \}
+
+let g:CommandTMaxDepth = 20
+let g:CommandTMaxHeight = 8

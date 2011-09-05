@@ -72,7 +72,7 @@ set visualbell " Instead of beeping when doing something wrong
 set virtualedit=block
 set wildmenu
 set wildmode=longest:full,full
-set wildignore+=*~
+set wildignore=.git,downloader,pkginfo,includes,media,var
 set winaltkeys=no
 
 if !has("gui_running") && $DISPLAY == '' || !has("gui")
@@ -248,7 +248,7 @@ endif
 " Section: Mappings {{{1
 " ----------------------
 
-map \\              <Plug>NERDCommenterInvert
+map \\ <Plug>NERDCommenterInvert
 " Merge consecutive empty lines and clean up trailing whitespace
 map <Leader>fm :g/^\s*$/,/\S/-j<Bar>%s/\s\+$//<CR>
 map <Leader>v  :so ~/.vimrc<CR>
@@ -424,6 +424,6 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax")
 endif
 
 " }}}1
-if filereadable(expand("~/.vim/.vimrc.local"))
+if filereadable(expand("~/.vim/vimrc.local"))
   source ~/.vim/vimrc.local
 endif
