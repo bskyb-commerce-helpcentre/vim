@@ -21,7 +21,7 @@ endif
 if exists("&breakindent")
   set breakindent showbreak=+++
 elseif has("gui_running")
-  set showbreak=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +++
+  "set showbreak=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +++
 endif
 
 set cmdheight=2
