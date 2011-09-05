@@ -424,6 +424,6 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax")
 endif
 
 " }}}1
-if filereadable(expand("~/.vimrc.local"))
+if filereadable(expand("~/.vim/.vimrc.local"))
   source ~/.vim/vimrc.local
 endif

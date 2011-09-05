@@ -1,0 +1,61 @@
+syntax enable
+colorscheme solarized
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+
+" Set control and e expand zencoding
+let g:user_zen_expandabbr_key = '<c-e>'
+
+" Set json filestype to javascript for syntax check
+autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd FileType sass setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
+" Use /tmp/ for swp and backup dir
+set backupdir=/Users/jamie/.tmp
+set directory=/Users/jamie/.tmp
+
+" case insensitive search
+set ignorecase
+set smartcase
+
+"Better line wrapping 
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+
+"Hard-wrap paragraphs of text
+nnoremap <leader>q gqip
+
+"Enable code folding
+set nofoldenable
+
+"Shortcut to fold tags with leader (usually \) + ft
+nnoremap <leader>ft Vatzf
+
+
+set number      "add line numbers
+
+silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
+
+"map to CommandT TextMate style finder
+nnoremap <leader>t :CommandT<CR>
+
+"Enabling Zencoding
+let g:user_zen_settings = {
+  \  'php' : {
+  \    'extends' : 'html',
+  \    'filters' : 'c',
+  \  },
+  \  'xml' : {
+  \    'extends' : 'html',
+  \  },
+  \  'haml' : {
+  \    'extends' : 'html',
+  \  },
+  \  'erb' : {
+  \    'extends' : 'html',
+  \  },
+ \}
