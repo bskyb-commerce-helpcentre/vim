@@ -57,3 +57,8 @@ let g:user_zen_settings = {
 
 let g:CommandTMaxDepth = 20
 let g:CommandTMaxHeight = 8
+
+" Disable syntastic for certain filetypes
+let g:syntastic_disabled_filetypes = ['sass', 'scss']
+
+nnoremap <leader>h :Hammer<CR>

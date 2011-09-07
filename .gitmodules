@@ -46,10 +46,6 @@
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
 	ignore = untracked
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = git://github.com/ervandew/supertab.git
-	ignore = untracked
 [submodule "bundle/ragtag"]
 	path = bundle/ragtag
 	url = git://github.com/tpope/vim-ragtag.git
@@ -86,3 +82,6 @@
 	path = bundle/rvm-git
 	url = git://github.com/tpope/vim-rvm.git
 	ignore = untracked
+[submodule "bundle/hammer"]
+	path = bundle/hammer
+	url = git://github.com/robgleeson/hammer.vim.git

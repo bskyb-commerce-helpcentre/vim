@@ -18,11 +18,12 @@ if has("balloon_eval") && has("unix")
   set ballooneval
 endif
 
-if exists("&breakindent")
-  set breakindent showbreak=+++
-elseif has("gui_running")
-  set showbreak=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +++
-endif
+"if exists("&breakindent")
+  "set breakindent showbreak=+++
+"elseif has("gui_running")
+  "set showbreak=\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +++
+"endif
+set showbreak=↳\ 
 
 set cmdheight=2
 set complete-=i     " Searching includes can be slow
@@ -72,7 +73,7 @@ set visualbell " Instead of beeping when doing something wrong
 set virtualedit=block
 set wildmenu
 set wildmode=longest:full,full
-set wildignore=.git,downloader,pkginfo,includes,media,var
+set wildignore=.git,downloader,pkginfo,includes
 set winaltkeys=no
 
 if !has("gui_running") && $DISPLAY == '' || !has("gui")
