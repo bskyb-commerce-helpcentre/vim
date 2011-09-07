@@ -13,8 +13,8 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd FileType sass setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Use /tmp/ for swp and backup dir
-set backupdir=/Users/jamie/.tmp
-set directory=/Users/jamie/.tmp
+"set backupdir=/Users/jamie/.tmp
+"set directory=/Users/jamie/.tmp
 
 " case insensitive search
 set ignorecase
