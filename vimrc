@@ -109,7 +109,7 @@ if has("eval")
 let g:is_bash = 1
 let g:ruby_minlines = 500
 let g:rubycomplete_buffer_loading = 1
-let g:rubycomplete_rails = 1
+"let g:rubycomplete_rails = 1 " This causes seg fault on ubuntu
 let g:spellfile_URL = 'http://ftp.vim.org/vim/runtime/spell'
 let g:ragtag_global_maps = 1
 let g:syntastic_enable_signs = 1
