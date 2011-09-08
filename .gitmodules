@@ -99,3 +99,6 @@
 [submodule "bundle/hammer"]
 	path = bundle/hammer
 	url = git://github.com/robgleeson/hammer.vim.git
+[submodule "bundle/vim-supertab"]
+	path = bundle/vim-supertab
+	url = git://github.com/tsaleh/vim-supertab.git
