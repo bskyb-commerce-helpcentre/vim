@@ -58,8 +58,6 @@ let g:user_zen_settings = {
 let g:CommandTMaxDepth = 20
 let g:CommandTMaxHeight = 8
 
-set guifont=Monaco\ 12
-
 setglobal guioptions-=L
 setglobal guioptions-=l
 setglobal guioptions-=R
@@ -71,3 +69,4 @@ setglobal guioptions-=h
 let g:syntastic_disabled_filetypes = ['sass', 'scss']
 
 nnoremap <leader>h :Hammer<CR>
+
