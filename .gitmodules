@@ -113,3 +113,6 @@
 [submodule "bundle/vim-conque"]
 	path = bundle/vim-conque
 	url = git://github.com/rson/vim-conque.git
+[submodule "bundle/html5.vim"]
+	path = bundle/html5.vim
+	url = git://github.com/othree/html5.vim.git
