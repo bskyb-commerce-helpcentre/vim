@@ -1,6 +1,8 @@
 " ~/.vimrc
 " vim:set ft=vim et tw=78 sw=2:
 
+let mapleader = ","
+
 " Section: Options {{{1
 " ---------------------
 if has("win32")
