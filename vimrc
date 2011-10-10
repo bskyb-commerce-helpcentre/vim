@@ -405,7 +405,6 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax")
     autocmd VimEnter *  if !has("gui_running") | set background=dark notitle noicon | endif
     autocmd GUIEnter *  set background=light title icon cmdheight=2 lines=25 columns=80 guioptions-=T
     autocmd GUIEnter *  if has("diff") && &diff | set columns=165 | endif
-    autocmd GUIEnter *  colorscheme vividchalk
     autocmd GUIEnter *  call s:initialize_font()
     autocmd GUIEnter *  let $GIT_EDITOR = 'false'
     autocmd Syntax css  syn sync minlines=50
@@ -417,5 +416,3 @@ endif
 if filereadable(expand("~/.vim/vimrc.local"))
   source ~/.vim/vimrc.local
 endif
-
-let g:SuperTabSetDefaultCompletionType="context"

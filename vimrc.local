@@ -86,3 +86,5 @@ autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 inoremap jj <ESC>
+
+colorscheme vividchalk
