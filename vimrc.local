@@ -68,8 +68,6 @@ setglobal guioptions-=h
 " Disable syntastic for certain filetypes
 let g:syntastic_disabled_filetypes = ['sass', 'scss']
 
-nnoremap <leader>h :Hammer<CR>
-
 set completeopt+=longest,menu,preview
 
 " For code completion with a drop down menu
