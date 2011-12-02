@@ -75,7 +75,7 @@ set visualbell " Instead of beeping when doing something wrong
 set virtualedit=block
 set wildmenu
 set wildmode=longest:full,full
-set wildignore=.git,downloader,pkginfo,includes
+set wildignore=.git,downloader,pkginfo,includes,tmp
 set winaltkeys=no
 
 if !has("gui_running") && $DISPLAY == '' || !has("gui")
