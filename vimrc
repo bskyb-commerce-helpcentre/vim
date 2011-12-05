@@ -380,7 +380,7 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax")
         set guifont=Monaco:h12
       elseif has("unix")
         if &guifont == ""
-          set guifont=Monaco\ 12
+          set guifont=Monaco\ 11
         endif
       elseif has("win32")
         set guifont=Consolas:h11,Courier\ New:h10
