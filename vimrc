@@ -65,7 +65,7 @@ set smartcase        " Case insensitive searches become sensitive with capitals
 set smarttab         " sw at the start of the line, sts everywhere else
 set splitbelow       " Split windows at bottom
 
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%{exists('*rails#statusline')?rails#statusline():''}%{exists('*fugitive#statusline')?fugitive#statusline():''}%#ErrorMsg#%{exists('*SyntasticStatuslineFlag')?SyntasticStatuslineFlag():''}%*%=%-16(\ %l,%c-%v\ %)%P
+"set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%{exists('*rails#statusline')?rails#statusline():''}%{exists('*fugitive#statusline')?fugitive#statusline():''}%#ErrorMsg#%{exists('*SyntasticStatuslineFlag')?SyntasticStatuslineFlag():''}%*%=%-16(\ %l,%c-%v\ %)%P
 
 set tags+=../tags,../../tags,../../../tags,../../../../tags
 set timeoutlen=1200 " A little bit more time for macros
@@ -114,8 +114,8 @@ let g:rubycomplete_buffer_loading = 1
 "let g:rubycomplete_rails = 1 " This causes seg fault on ubuntu
 let g:spellfile_URL = 'http://ftp.vim.org/vim/runtime/spell'
 let g:ragtag_global_maps = 1
-let g:syntastic_enable_signs = 1
-let g:syntastic_auto_loc_list = 1
+"let g:syntastic_enable_signs = 1
+"let g:syntastic_auto_loc_list = 1
 let g:surround_indent = 1
 endif
 
