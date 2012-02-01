@@ -126,3 +126,6 @@
 [submodule "bundle/taglist.vim"]
 	path = bundle/taglist.vim
 	url = git://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/csv.vim"]
+	path = bundle/csv.vim
+	url = git://github.com/chrisbra/csv.vim.git
