@@ -156,15 +156,10 @@ let g:CommandTMaxHeight = 8
 
 " Remove toolbar
 setglobal guioptions-=T
+setglobal guioptions-=r
+setglobal guioptions-=L
 
 set completeopt+=longest,menu,preview
-
-" For code completion with a drop down menu
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
-let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
-let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
 
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
@@ -173,3 +168,14 @@ autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 inoremap jj <ESC>
+
+" vim-rspec plugin
+
+" disable default key binding
+let g:RspecKeymap=0
+map <Leader>r :RunSpec<CR>
+map <Leader>rl :RunSpecLine<cr>
+
+" Highlight lines longer than 80 chars
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
