@@ -54,6 +54,7 @@ set showcmd          " Show (partial) command in status line.
 set showmatch        " Show matching brackets.
 set smartcase        " Case insensitive searches become sensitive with capitals
 set smarttab         " sw at the start of the line, sts everywhere else
+set expandtab
 set sw=2
 set ts=2
 set sts=2
