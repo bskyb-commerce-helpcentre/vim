@@ -54,6 +54,9 @@ set showcmd          " Show (partial) command in status line.
 set showmatch        " Show matching brackets.
 set smartcase        " Case insensitive searches become sensitive with capitals
 set smarttab         " sw at the start of the line, sts everywhere else
+set sw=2
+set ts=2
+set sts=2
 set splitbelow       " Split windows at bottom
 
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%{exists('*rails#statusline')?rails#statusline():''}%{exists('*fugitive#statusline')?fugitive#statusline():''}*%=%-16(\ %l,%c-%v\ %)%P
