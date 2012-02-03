@@ -87,3 +87,9 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 inoremap jj <ESC>
 
 colorscheme vividchalk
+
+" map copy pase to usual control + c etc.
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
