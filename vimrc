@@ -156,6 +156,8 @@ let g:CommandTMaxHeight = 8
 
 " Remove toolbar
 setglobal guioptions-=T
+setglobal guioptions-=r
+setglobal guioptions-=L
 
 set completeopt+=longest,menu,preview
 
