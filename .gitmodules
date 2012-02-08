@@ -42,10 +42,6 @@
 	path = bundle/command-t
 	url = git://github.com/wincent/Command-T.git
 	ignore = untracked
-[submodule "bundle/php.vim-html-enhanced"]
-	path = bundle/php.vim-html-enhanced
-	url = git://github.com/vim-scripts/php.vim-html-enhanced.git
-	ignore = untracked
 [submodule "bundle/vividchalk"]
 	path = bundle/vividchalk
 	url = git://github.com/vim-scripts/vividchalk.vim.git
