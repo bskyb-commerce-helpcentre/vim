@@ -88,7 +88,15 @@ map <Leader>v  :so ~/.vimrc<CR>
 " Section: Visual
 " ---------------
 
-colorscheme vividchalk
+let g:solarized_termcolors=256
+
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+
+colorscheme solarized
 
 " Switch syntax highlighting on, when the terminal has colors
 if exists("&guifont")
