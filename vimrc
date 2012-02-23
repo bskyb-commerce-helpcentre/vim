@@ -55,9 +55,9 @@ set showmatch        " Show matching brackets.
 set smartcase        " Case insensitive searches become sensitive with capitals
 set smarttab         " sw at the start of the line, sts everywhere else
 set expandtab
-set sw=2
-set ts=2
-set sts=2
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set splitbelow       " Split windows at bottom
 
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%{exists('*rails#statusline')?rails#statusline():''}%{exists('*fugitive#statusline')?fugitive#statusline():''}*%=%-16(\ %l,%c-%v\ %)%P
@@ -110,8 +110,8 @@ let g:user_zen_expandabbr_key = '<c-e>'
 
 " Set json filestype to javascript for syntax check
 autocmd BufNewFile,BufRead *.json set      ft=javascript
-autocmd FileType           sass   setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType           html   setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType           php    setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Use /tmp/ for swp and backup dir
 "set backupdir=/Users/jamie/.tmp
