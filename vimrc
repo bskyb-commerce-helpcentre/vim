@@ -5,10 +5,6 @@ let mapleader = ","
 
 " Section: Options {{{1
 " ---------------------
-if has("win32")
-  let &runtimepath = substitute(&runtimepath,'\(Documents and Settings[\\/][^\\/]*\)[\\/]\zsvimfiles\>','.vim','g')
-endif
-
 silent! call pathogen#runtime_append_all_bundles()
 
 set nocompatible
@@ -18,10 +14,6 @@ set backspace=2
 set backupskip+=*.tmp,crontab.*
 
 filetype plugin indent on
-
-if has("balloon_eval") && has("unix")
-  set ballooneval
-endif
 
 set showbreak=↳\ 
 
@@ -42,23 +34,18 @@ endif
 
 set listchars=tab:>\ ,trail:-
 set listchars+=extends:>,precedes:<
-if version >= 700
-  set listchars+=nbsp:+
-endif
+set listchars+=nbsp:+
 
 set modelines=5      " Debian likes to disable this
-set mousemodel=popup " In gvim, you can use the mouse for copy/paste etc with
-
 set scrolloff=5      " minimum number of lines above and below the cursor
 set showcmd          " Show (partial) command in status line.
 set showmatch        " Show matching brackets.
 set smartcase        " Case insensitive searches become sensitive with capitals
-set smarttab         " sw at the start of the line, sts everywhere else
 set expandtab
-set sw=2
-set ts=2
-set sts=2
-set splitbelow       " Split windows at bottom
+set smarttab         " sw at the start of the line, sts everywhere else
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%{exists('*rails#statusline')?rails#statusline():''}%{exists('*fugitive#statusline')?fugitive#statusline():''}*%=%-16(\ %l,%c-%v\ %)%P
 
@@ -71,7 +58,6 @@ set virtualedit=block
 set wildmenu
 set wildmode=longest:full,full
 set wildignore=.git,downloader,pkginfo,includes,tmp
-set winaltkeys=no
 
 if !has("gui_running") && $DISPLAY == '' || !has("gui")
   set mouse=
@@ -81,8 +67,6 @@ endif
 " ----------------------
 
 map \\ <Plug>NERDCommenterInvert
-" Merge consecutive empty lines and clean up trailing whitespace
-map <Leader>fm :g/^\s*$/,/\S/-j<Bar>%s/\s\+$//<CR>
 map <Leader>v  :so ~/.vimrc<CR>
 
 " Section: Visual
@@ -110,8 +94,6 @@ let g:user_zen_expandabbr_key = '<c-e>'
 
 " Set json filestype to javascript for syntax check
 autocmd BufNewFile,BufRead *.json set      ft=javascript
-autocmd FileType           sass   setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType           html   setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Use /tmp/ for swp and backup dir
 "set backupdir=/Users/jamie/.tmp
@@ -128,9 +110,6 @@ set formatoptions=qrn1
 
 "Enable code folding
 set nofoldenable
-
-"Shortcut to fold tags with leader (usually \) + ft
-nnoremap <leader>ft Vatzf
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
