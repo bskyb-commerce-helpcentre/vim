@@ -68,7 +68,7 @@ set ttimeoutlen=50  " Make Esc work faster
 set visualbell " Instead of beeping when doing something wrong
 set virtualedit=block
 set wildmenu
-set wildmode=longest:full,full
+set wildmode=longest,list
 set wildignore=.git,downloader,pkginfo,includes,tmp
 set winaltkeys=no
 
@@ -86,16 +86,18 @@ map <Leader>v  :so ~/.vimrc<CR>
 
 " Section: Visual
 " ---------------
+syntax enable
 
-let g:solarized_termcolors=256
-
-if has('gui_running')
-  set background=light
-else
-  set background=dark
-endif
+set background=light
+"if has('gui_running')
+  "set background=light
+"else
+  "set background=dark
+"endif
 
 colorscheme solarized
+"colorscheme desert
+"colorscheme vividchalk
 
 " Switch syntax highlighting on, when the terminal has colors
 if exists("&guifont")
@@ -109,8 +111,6 @@ if exists("&guifont")
     set guifont=Consolas:h11,Courier\ New:h10
   endif
 endif
-
-syntax on
 
 " Set control and e expand zencoding
 let g:user_zen_expandabbr_key = '<c-e>'
@@ -178,5 +178,5 @@ map <Leader>r :RunSpec<CR>
 map <Leader>rl :RunSpecLine<cr>
 
 " Highlight lines longer than 80 chars
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
