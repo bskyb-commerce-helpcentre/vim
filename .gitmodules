@@ -134,3 +134,9 @@
 	path = bundle/vim-rspec
 	url = git://github.com/skwp/vim-rspec.git
 	ignore = untracked
+[submodule "bundle/vim-ruby-minitest"]
+	path = bundle/vim-ruby-minitest
+	url = git://github.com/sunaku/vim-ruby-minitest.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = git://github.com/kien/ctrlp.git

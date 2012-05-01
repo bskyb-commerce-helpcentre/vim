@@ -34,11 +34,7 @@ set joinspaces
 set laststatus=2    " Always show status line
 set number          " Show line numbers
 
-if has("mac")
-  silent! set nomacatsui
-else
-  set lazyredraw
-endif
+"set lazyredraw
 
 set listchars=tab:>\ ,trail:-
 set listchars+=extends:>,precedes:<
@@ -89,15 +85,10 @@ map <Leader>v  :so ~/.vimrc<CR>
 syntax enable
 
 set background=light
-"if has('gui_running')
-  "set background=light
-"else
-  "set background=dark
-"endif
-
 colorscheme solarized
 "colorscheme desert
 "colorscheme vividchalk
+"colorscheme Tomorrow
 
 " Switch syntax highlighting on, when the terminal has colors
 if exists("&guifont")
@@ -169,14 +160,3 @@ setglobal guioptions-=L
 set completeopt+=longest,menu,preview
 
 inoremap jj <ESC>
-
-" vim-rspec plugin
-
-" disable default key binding
-let g:RspecKeymap=0
-map <Leader>r :RunSpec<CR>
-map <Leader>rl :RunSpecLine<cr>
-
-" Highlight lines longer than 80 chars
-"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-"match OverLength /\%81v.\+/
