@@ -85,6 +85,10 @@ map <Leader>v  :so ~/.vimrc<CR>
 syntax enable
 
 set background=light
+let g:solarized_termcolors=256
+set t_Co=16
+
+set background=light
 colorscheme solarized
 "colorscheme desert
 "colorscheme vividchalk
