@@ -84,25 +84,6 @@ map <Leader>v  :so ~/.vimrc<CR>
 " ---------------
 syntax enable
 
-set background=light
-colorscheme solarized
-"colorscheme desert
-"colorscheme vividchalk
-"colorscheme Tomorrow
-
-" Switch syntax highlighting on, when the terminal has colors
-if exists("&guifont")
-  if has("mac")
-    set guifont=Monaco:h12
-  elseif has("unix")
-    if &guifont == ""
-      set guifont=Monaco\ 11
-    endif
-  elseif has("win32")
-    set guifont=Consolas:h11,Courier\ New:h10
-  endif
-endif
-
 " Set control and e expand zencoding
 let g:user_zen_expandabbr_key = '<c-e>'
 
@@ -111,9 +92,9 @@ autocmd BufNewFile,BufRead *.json set      ft=javascript
 autocmd FileType           html   setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType           php    setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
-" Use /tmp/ for swp and backup dir
-"set backupdir=/Users/jamie/.tmp
-"set directory=/Users/jamie/.tmp
+" Use ~/tmp/ for swp and backup dir
+set backupdir=~/.tmp
+set directory=~/.tmp
 
 " case insensitive search
 set ignorecase
@@ -126,9 +107,6 @@ set formatoptions=qrn1
 
 "Enable code folding
 set nofoldenable
-
-"Shortcut to fold tags with leader (usually \) + ft
-nnoremap <leader>ft Vatzf
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
