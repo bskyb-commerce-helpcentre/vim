@@ -92,9 +92,9 @@ autocmd BufNewFile,BufRead *.json set      ft=javascript
 autocmd FileType           html   setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType           php    setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
-" Use /tmp/ for swp and backup dir
-"set backupdir=/Users/jamie/.tmp
-"set directory=/Users/jamie/.tmp
+" Use ~/tmp/ for swp and backup dir
+set backupdir=~/.tmp
+set directory=~/.tmp
 
 " case insensitive search
 set ignorecase
@@ -107,9 +107,6 @@ set formatoptions=qrn1
 
 "Enable code folding
 set nofoldenable
-
-"Shortcut to fold tags with leader (usually \) + ft
-nnoremap <leader>ft Vatzf
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
