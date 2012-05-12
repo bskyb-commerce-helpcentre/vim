@@ -84,29 +84,6 @@ map <Leader>v  :so ~/.vimrc<CR>
 " ---------------
 syntax enable
 
-set background=light
-let g:solarized_termcolors=256
-set t_Co=16
-
-set background=light
-colorscheme solarized
-"colorscheme desert
-"colorscheme vividchalk
-"colorscheme Tomorrow
-
-" Switch syntax highlighting on, when the terminal has colors
-if exists("&guifont")
-  if has("mac")
-    set guifont=Monaco:h12
-  elseif has("unix")
-    if &guifont == ""
-      set guifont=Monaco\ 11
-    endif
-  elseif has("win32")
-    set guifont=Consolas:h11,Courier\ New:h10
-  endif
-endif
-
 " Set control and e expand zencoding
 let g:user_zen_expandabbr_key = '<c-e>'
 
