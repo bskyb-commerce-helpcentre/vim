@@ -88,7 +88,8 @@ syntax enable
 let g:user_zen_expandabbr_key = '<c-e>'
 
 " Set json filestype to javascript for syntax check
-autocmd BufNewFile,BufRead *.json set      ft=javascript
+autocmd BufNewFile,BufRead *.json   set ft=javascript
+autocmd BufNewFile,BufRead *.coffee set ft=coffee
 autocmd FileType           html   setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType           php    setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
@@ -101,7 +102,7 @@ set ignorecase
 set smartcase
 
 "Better line wrapping 
-set wrap
+set nowrap
 set textwidth=79
 set formatoptions=qrn1
 
