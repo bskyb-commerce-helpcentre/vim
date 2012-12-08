@@ -100,8 +100,7 @@ set directory=~/.tmp
 set ignorecase
 set smartcase
 
-"Better line wrapping 
-set wrap
+set nowrap
 set textwidth=79
 set formatoptions=qrn1
 
